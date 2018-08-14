@@ -6,6 +6,12 @@
   <%= @task.completed ? "This task is completed" : "This task is yet to be done" %>
 </span>
 
+<%= link_to "Delete", task_path(@task.id),  class:"delete",
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
+<%= link_to 'Edit this task', edit_path%>
+
 
 
 

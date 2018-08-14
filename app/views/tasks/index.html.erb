@@ -5,7 +5,12 @@
    <li> 
     <input type="checkbox" <%= t.completed ? "checked" : "" %> >
     <%= link_to t.title, task_path(t.id)%>
-    <%= t.completed %>
+    <%= link_to image_tag("noun-trash.png", width: 20), task_path(t.id),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
    </li>
   <% end %>
 </ul>
+
+
+
